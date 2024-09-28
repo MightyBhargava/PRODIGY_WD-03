@@ -1,0 +1,214 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Header and Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Section Boxes */
+.section-box {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    transition: opacity 0.5s ease-in-out;
+}
+
+.section-box.hidden {
+    opacity: 0;
+    display: none;
+}
+
+.section-box.visible {
+    opacity: 1;
+}
+
+/* Game Modes */
+.game-option {
+    display: inline-block;
+    text-align: center;
+    margin: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.game-option:hover {
+    transform: scale(1.1);
+}
+
+.game-option i {
+    font-size: 50px;
+    color: white;
+}
+
+.game-option p {
+    color: white;
+    font-size: 20px;
+}
+
+/* Player Selection */
+#playerSelection {
+    margin-top: 20px;
+}
+
+#playerSelection input {
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#playerSelection button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#playerSelection button:hover {
+    background-color: #218838;
+}
+
+/* Game Board */
+#gameContainer {
+    margin: 50px auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    justify-content: center;
+}
+
+.grid .cell {
+    background-color: #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.grid .cell:hover {
+    background-color: #666;
+}
+
+/* Game Messages */
+#gameMessage {
+    margin-top: 20px;
+}
+
+#gameMessage i {
+    font-size: 50px;
+    color: #28a745;
+}
+
+#gameMessage p {
+    font-size: 20px;
+}
+
+/* Tips and Rules */
+#tips {
+    text-align: center;
+}
+
+.tips-content img {
+    width: 100px;
+    margin: 10px;
+}
+
+.tips-details {
+    margin-top: 20px;
+}
+
+.tips-details ul {
+    list-style: disc;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+/* Contact Form */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe Game</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <div class="logo">
+            <img src="ticl.png" alt="Tic-Tac-Toe Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#tips">Tips</a></li>
+                <li><a href="#rules">Rules</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Game Mode and Player Name Selection -->
+    <section id="game-settings" class="section-box">
+        <div class="game-option" data-mode="player-vs-player">
+            <i class="material-icons">people</i>
+            <p>Player vs Player</p>
+        </div>
+        <div class="game-option" data-mode="player-vs-computer">
+            <i class="material-icons">computer</i>
+            <p>Player vs Computer</p>
+        </div>
+        <div id="playerSelection" class="hidden">
+            <div id="playerNames">
+                <input type="text" id="player1" placeholder="Enter Player 1 Name">
+                <input type="text" id="player2" placeholder="Enter Player 2 Name" class="hidden">
+            </div>
+            <div id="symbolsSelection" class="hidden">
+                <input type="text" id="playerXSymbol" placeholder="Enter X Symbol" maxlength="1">
+                <input type="text" id="playerOSymbol" placeholder="Enter O Symbol" maxlength="1">
+            </div>
+            <button id="startGame">Start Game</button>
+        </div>
+    </section>
+
+    <!-- Game Board -->
+    <section id="game-board" class="section-box hidden">
+        <div id="gameContainer">
+            <div class="grid">
+                <!-- 3x3 grid cells will be generated here -->
+            </div>
+            <p id="gameStatus">Player X's Turn</p>
+            <div id="gameMessage" class="hidden">
+                <i id="messageIcon" class="material-icons"></i>
+                <p id="messageText"></p>
+            </div>
+            <button id="restartGame" class="hidden">
+                <i class="material-icons">refresh</i> Restart
+            </button>
+        </div>
+    </section>
+
+    <!-- Tips Section -->
+    <section id="tips" class="section-box">
+        <h2>Tips to Play</h2>
+        <p>Improve your game with these tips:</p>
+        <div class="tips-content">
+            <img src="images/tip1.png" alt="Tip 1">
+            <img src="images/tip2.png" alt="Tip 2">
+            <img src="images/tip3.png" alt="Tip 3">
+        </div>
+        <div class="tips-details">
+            <h3>Advanced Tips:</h3>
+            <ul>
+                <li>Always start in the center to maximize your chances of winning.</li>
+                <li>Control the corners to put pressure on your opponent.</li>
+                <li>Try to create multiple threats at once to force your opponent into a losing position.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Rules Section -->
+    <section id="rules" class="section-box">
+        <h2>Game Rules</h2>
+        <p>Here are the official rules for Tic-Tac-Toe:</p>
+        <ul>
+            <li>Players take turns marking a square.</li>
+            <li>The first to align three of their marks (either horizontally, vertically, or diagonally) wins.</li>
+            <li>If all squares are filled and no player has aligned three marks, the game ends in a draw.</li>
+        </ul>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="section-box">
+        <h2>Contact Us</h2>
+        <form id="contactForm" enctype="multipart/form-data">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <label for="fileUpload">Upload a PDF file:</label>
+            <input type="file" id="fileUpload" name="fileUpload" accept="application/pdf">
+
+            <label>
+                <input type="checkbox" id="confirmationBox" name="confirmation" required>
+                I confirm that the information is correct.
+            </label>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
